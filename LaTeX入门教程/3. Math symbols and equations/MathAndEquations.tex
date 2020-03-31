@@ -1,0 +1,231 @@
+% latex 数学符号与公式
+
+
+% 本教程2019-7-20 前由 Yushu Xu 维护
+% 2019-7-20 起由 Tongxin Ren  维护
+
+\documentclass[12pt]{elegantpaper} % 源文件的类型
+
+%============================================================
+%                     宏包区
+%============================================================
+
+% 数学类
+\usepackage{amsmath}        %数学公式
+
+% 颜色
+\usepackage{xcolor}
+\numberwithin{equation}{section}
+%============================================================
+%                     标题区
+%============================================================
+\title{\LaTeX : 数学符号与公式}
+
+% 作者
+\author{任公子@SJTU}
+
+% 日期
+\date{\today}  
+
+%============================================================
+%                    文档开始
+%============================================================
+\begin{document}
+
+\maketitle   %生成标题页
+
+%============================================================
+\section{常用数学符号}
+
+
+上下标： $A_{ij}^{2}$ %用^ 和_ 标明上下标。注意上下标的内容（子公式）一般需要用花括号包裹，否则上下标只对后面的一个符号起作用。
+
+
+求和： $\sum_{i=1}^{N} x_i$
+
+完整求和符号可在行间公式展开： $$\sum_{i=1}^{N} x_i$$
+
+或者使用displaystyle命令  $\displaystyle \sum_{k=1}^{N} a_k^2$
+
+
+
+比较符号：$\textless$, $\le$, $\leq$, $\textgreater$, $\ge$, $\geq$, $\geqq$, $\approx$, $\neq$
+
+
+矩阵：
+
+$
+\begin{pmatrix}
+0 & 23 & 1 \\
+
+1 & 0 \\
+
+3 & 7
+\end{pmatrix}
+$
+
+
+
+%  以下部分不再多介绍
+
+无穷大： $\infty$
+
+加减号：$\pm$, $\mp$
+
+属于：$\in$
+
+积分: $\int_0^x f(x) dx$, $\oint$
+
+乘号: $\times$, $\cdot$, $\prod$
+
+加减号：$\pm$, $\mp$
+
+分式：$\dfrac{a_i}{b_i+c_i}$
+
+根号：$\sqrt[6]{a}$
+
+二项式结构:
+
+$\binom{a}{b}$
+
+
+西文省略号
+
+1, 2, $\ldots$, 10
+
+1, 2, $\dots$, 10
+
+1+2+3+$\cdots$+10
+
+$\vdots$
+
+$\ddots$
+
+
+\section{希腊字母}
+
+$\alpha, \beta, \gamma, \theta, \phi, \lambda, \delta, \triangle, \sigma$
+
+$\Gamma, \Theta, \Phi, \Lambda, \Delta, \Sigma$
+
+\section{不能直接输入的标点符号}
+
+1200 \%
+
+1 数学模式符号：
+\$
+
+$a+b$
+
+2 注释符号：
+\%
+
+3 上标：
+\^{}
+
+4 下标：
+\_
+
+5 取反符号：
+\~{}
+
+6 宏命令：
+\textbackslash
+
+7 宏定义符号：
+\#
+
+8 表格对齐符号：
+\&
+
+9 分组：
+\{ \}
+
+
+
+%============================================================
+\section{数学公式的插入与编辑}
+
+
+\subsection{行内公式}
+%与文字混排
+This equation $x + y = z$ is always right.
+
+
+
+
+
+\subsection{行间公式}
+%单独占一行
+
+$$x+y=z$$
+
+
+% 或者写为
+\[x+y=z\]
+
+
+无编号：
+\begin{equation*}
+x+y=z
+\end{equation*}
+
+
+有编号：
+\begin{equation}
+\label{eq1}
+x+y=z
+\end{equation}
+
+
+
+两种不同的引用方式：
+As we can see from the above equation \ref{eq1}, 
+
+%\usepackage{amsmath}
+As we can see from the above equation \eqref{eq1}, 
+
+
+
+自定义公式的编号：
+\begin{equation}
+\tag{Eq.1}
+x+y=z
+\end{equation}
+
+\subsection{多行公式}
+一个编号
+\begin{multline}
+a+b  \\
+c+d \\
+e+f 
+\end{multline}
+
+
+\begin{equation}
+\begin{aligned}
+a  & = b  + c \\
+& = d + e  \\
+& = f + g
+\end{aligned}
+\end{equation}
+
+对齐，多编号
+\begin{align}
+\label{eq2}
+a & = b + c \\
+& = d + e
+\end{align}
+
+无对齐，多编号
+\begin{gather}
+a+b=2 \\
+c+d+e=2 \\
+e+f=1
+\end{gather}
+%============================================================
+\section{【强推】公式识别神奇：mathpix}
+
+
+
+\end{document}

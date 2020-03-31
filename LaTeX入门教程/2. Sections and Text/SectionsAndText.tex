@@ -1,0 +1,203 @@
+% latex的文本与段落结构
+
+% 本教程2019-7-20 前由 Yushu Xu 维护
+% 2019-7-20 起由 Tongxin Ren  维护
+
+\documentclass[12pt, a4paper, onecolumn]{elegantpaper}  % 源文件的类型
+
+% [] 可选参数，{}必选参数
+
+
+% 文件类型： article，report，book，slides
+
+% 字号的设置：10pt / 11pt / 12pt
+
+% 长度的单位
+	% pt：point
+	% in: inch 英寸 (1in = 72.27pt)
+	% cm (2.54cm = 1in)
+	% em (字母M的长度)
+
+% 纸张大小：a4paper / letterpaper
+
+% 排版格式：onecolumn / twocolumn
+
+
+%============================================================
+%                     宏包区
+%============================================================
+
+% 设置全局字体
+\usepackage{txfonts}        %全文定义罗马字体Time New Roman
+%\usepackage{helvet}
+%\usepackage{courier}        %打字机（等宽）字体
+
+\usepackage{amsthm}          %特殊文本环境
+
+% 颜色
+\usepackage{color}          %文本颜色
+\usepackage{xcolor}
+
+\usepackage{geometry}       %页面格式
+\geometry{ 
+	left=2cm,
+	right=2cm,
+	top=2cm, 
+	bottom=2cm,
+}
+
+
+
+
+
+
+%============================================================
+%                     标题区
+%============================================================
+\title{\LaTeX : 文本与段落结构}
+% 作者
+\author{任公子@SJTU}
+\date{}
+
+%日期
+\date{\today}  % 自动显示现在的日期
+%\date{2019.01.22}
+%\date{Jan. $20^{th}$}   % 需使用amsmath宏包
+
+
+
+
+
+%============================================================
+%                    文档开始
+%============================================================
+\begin{document}
+ 
+\maketitle  %生成标题页，包含标题、摘要和日期等信息
+
+% 修改摘要的名字
+%\renewcommand{\abstractname}{摘要} % abstract -> Summary
+\begin{abstract}
+这是我的摘要。这是我的摘要。这是我的摘要。这是我的摘要。这是我的摘要。这是我的摘要。这是我的摘要。这是我的摘要。
+
+\end{abstract}
+
+
+
+%另起新页 
+\newpage 
+%\clearpage
+
+\tableofcontents % 目录
+\newpage
+%============================================================
+
+\textcolor{red}{\Huge{章节的划分:}}
+
+\section{SECTION}
+iMoDS model consists of three main submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model. For explanation, there is a figure which connects all related parts together.
+
+\subsection{subsection}
+iMoDS model consists of three main submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model. For explanation, there is a figure which connects all related parts together.
+
+\subsubsection{subsubsection}
+iMoDS model consists of three main submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model. For explanation, there is a figure which connects all related parts together.
+
+
+%============================================================
+\textcolor{red}{\Huge{空格，分行与分段方法}}
+
+(1) 空格
+
+this is a brief\quad document
+
+
+(2) 分行
+
+this is a brief document about writing \\ this is a 
+
+this is a brief document about writing \newline this is a 
+
+(3) 分段
+
+首行缩进
+
+this is a brief document about writing. I'd like to introduce it to you.
+
+this is a brief document about writing. I'd like to introduce it to you.
+
+首行不缩进
+
+\noindent this is a brief document about writing. I'd like to introduce it to you.
+
+%============================================================
+\textcolor{red}{\Huge{更改字体、字号、颜色}}
+
+字体
+
+\textit{Introduction}  % 意大利体
+
+\textup{Introduction}  % 直立体
+
+\textsl{Introduction}  % 斜体
+
+\textsc{Introduction}  % 全部大写
+
+\textbf{Introduction}  % 加粗体
+
+颜色
+
+\textcolor{red}{Introduction}
+
+\textcolor{blue}{Introduction}
+
+\textcolor{green}{Introduction}
+
+突出强调
+
+You \emph{should} use it carefully.
+
+You \textbf{should} use it carefully.
+
+You \underline{should} use it carefully.
+
+字体大小（由小到大）
+
+\tiny apple
+
+\scriptsize apple
+
+\footnotesize apple
+
+\small apple
+
+\normalsize apple
+
+\large apple
+
+\Large apple
+
+\LARGE apple
+
+\huge apple
+
+\normalsize
+ 
+%============================================================
+\textcolor{red}{\Huge{文本对齐方式}}
+
+\begin{center}
+iMoDS model consists of three main submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model. For explanation, there is a figure which connects all related parts together.
+\end{center}
+
+\begin{flushleft}
+iMoDS model consists of three main submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model. For explanation, there is a figure which connects all related parts together.
+\end{flushleft}
+
+\begin{flushright}
+iMoDS model consists of three main submodels, Risk Cost Model, Power Supply Ability Model, and Series Safety Model. For explanation, there is a figure which connects all related parts together.
+\end{flushright}
+
+%============================================================
+
+\end{document}

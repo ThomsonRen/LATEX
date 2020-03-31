@@ -1,0 +1,58 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Dorigo et~al.(2008)Dorigo, Birattari, Blum, Clerc, St{\"u}tzle, and
+  Winfield]{dorigo2008ant}
+Marco Dorigo, Mauro Birattari, Christian Blum, Maurice Clerc, Thomas
+  St{\"u}tzle, and Alan Winfield.
+\newblock \emph{Ant Colony Optimization and Swarm Intelligence: 6th
+  International Conference, ANTS 2008, Brussels, Belgium, September 22-24,
+  2008, Proceedings}, volume 5217.
+\newblock Springer, 2008.
+
+\bibitem[Mitchell(1997)]{Mitchell1997Machine}
+Thomas~M. Mitchell.
+\newblock \emph{Machine learning.}
+\newblock 1997.
+
+\bibitem[Xi et~al.(2018)Xi, Feris, Wang, and Metaxas]{Xi2018RED}
+Peng Xi, Rogerio~S. Feris, Xiaoyu Wang, and Dimitris~N. Metaxas.
+\newblock Red-net: A recurrent encoder–decoder network for video-based face
+  alignment.
+\newblock \emph{International Journal of Computer Vision}, \penalty0
+  (2):\penalty0 1--17, 2018.
+
+\bibitem[Akyildiz et~al.(2012)Akyildiz, Fekri, Sivakumar, Forest, and
+  Hammer]{akyildiz2012monaco}
+Ian~F Akyildiz, Faramarz Fekri, Raghupathy Sivakumar, Craig~R Forest, and
+  Brian~K Hammer.
+\newblock Monaco: fundamentals of molecular nano-communication networks.
+\newblock \emph{IEEE Wireless Commun.}, 19\penalty0 (5):\penalty0 12--18, Oct.
+  2012.
+
+\bibitem[Chernozhukov et~al.(2018)Chernozhukov, Chetverikov, Demirer, Duflo,
+  Hansen, Newey, and Robins]{Chernozhukov2018Double}
+Victor Chernozhukov, Denis Chetverikov, Mert Demirer, Esther Duflo, Christian
+  Hansen, Whitney Newey, and James Robins.
+\newblock Double/debiased machine learning for treatment and structural
+  parameters.
+\newblock \emph{Cemmap Working Papers}, 2018.
+
+\bibitem[Folkes et~al.(2018)Folkes, Lahav, and Maddox]{Folkes2018An}
+S.~R. Folkes, O.~Lahav, and S.~J. Maddox.
+\newblock An artificial neural network approach to the classification of galaxy
+  spectra.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  283\penalty0 (2):\penalty0 651--665, 2018.
+
+\bibitem[李耀华 et~al.()李耀华, 谭娜, and
+  郝贵和]{李耀华飞机排班航班串编制模型及算法研究}
+李耀华, 谭娜, and 郝贵和.
+\newblock 飞机排班航班串编制模型及算法研究.
+\newblock \emph{系统仿真学报}, \penalty0 (3):\penalty0 63--66.
+
+\end{thebibliography}

@@ -1,0 +1,87 @@
+
+\documentclass{book}
+
+
+\usepackage[ super,numbers]{natbib}
+
+% round: (default) 使用圆括号
+% square: 使用方括号
+% curly: 使用花括号
+% angle: 使用尖括号
+
+% colon: (default) 用引号分隔多个引用
+% comma: 用逗号分隔多个引用
+
+% authoryear: (default) 使用作者--年引用形式
+% numbers: 使用编号引用形式
+
+% super: 使用 Nature 那样的上标编号引用
+% sort: 多个引用按照首字母排序
+% sort&compress: 除排序外，多个引用可以合并 (如 3-6, 15)
+% longnamesfirst: 多个作者的文献第一次被引用时列出所有作者，以后的引用可以缩写为 et al.
+
+\usepackage{hyperref} 
+
+
+%% 文章信息区
+\title{\LaTeX: use of bib files}
+\date{\today}
+
+\begin{document}
+
+% article类
+%\renewcommand{\refname}{rename}
+
+% book和report类
+%\renewcommand{\bibname}{rename}
+
+\maketitle
+
+\newpage
+
+\section{References}
+\subsection{Simple Methods}
+This  system can be used for many types of airplanes\cite{dorigo2008ant}, and it also solves the interference during  the procedure of the boarding airplane,as described above we can get to the  optimization boarding time.We also know that all the service is automate.\cite[page 22]{Mitchell1997Machine}
+
+\subsection{Using of "natbib"}
+This  system can be used for many types of airplanes\citet{Xi2018RED}, and it also solves the interference during  the procedure of the boarding airplane,as described above we can get to the  optimization boarding time.We also know that all the service is automate.
+
+\subsection{Cite Multiple Articles }
+
+This  system can be used for many types of airplanes\cite{akyildiz2012monaco,Chernozhukov2018Double,Folkes2018An,Xi2018RED}, and it also solves the interference during  the procedure of the boarding airplane,as described above we can get to the  optimization boarding time.We also know that all the service is automate.\cite{李耀华飞机排班航班串编制模型及算法研究}
+
+% natbib 宏包同样也支持数字引用，并且支持将引用的序号压缩。
+
+\section{Hyperlink}
+
+% hyperref 宏包提供了直接书写超链接的命令，用于在PDF 中生成URL,区别是前者有彩色，后者没有。
+
+\url{http://wikipedia.org} \\
+\nolinkurl{http://wikipedia.org} \\
+\href{http://wikipedia.org}{Wiki}  % 把一段文字作为超链接
+
+% \begin{thebibliography}{width} 中的width用以限制参考文献序号的宽度
+
+% 99 意味着不超过两位数字。通常设定为与参考文献的数目一致。
+
+% thebibliography 环境自动生成不带编号的一节（article 文档类）或一章（report / book文档类）。
+
+% article: 节标题默认为 “Reference”
+% report / book : 章标题默认为 “Bibliography”
+
+% 自定义参考文献的标题：
+% \begin{thebibliography}{99}
+% \bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
+% Mathematical Society and Addison-Wesley
+% Publishing Company , 1984-1986.
+% \bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
+% Addison-Wesley Publishing Company, 1986.
+%\end{thebibliography}
+
+% 类型：plain alpha abbrv amsplain elsarticle-num IEEEtran
+% plainnat、abbrvnat 和unsrtnat
+
+\bibliographystyle{unsrtnat}
+\bibliography{Reference}
+
+\end{document}

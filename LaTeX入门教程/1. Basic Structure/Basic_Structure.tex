@@ -1,0 +1,51 @@
+% latex基本结构
+
+% 本教程2019-7-20 前由 Yushu Xu 维护
+% 2019-7-20 起由 Tongxin Ren  维护
+
+
+
+
+
+%============================================================
+%                     文档类型
+%============================================================
+
+\documentclass{article}
+% 文档类型: report / book / proc / slides / minimal
+
+
+
+%============================================================
+%                     （导言区）宏包区
+%============================================================
+
+% \usepackage{package name}
+
+% 表格支持
+\usepackage{tabularx}
+\usepackage{multirow} % 合并多行单元格
+
+% 图片支持
+\usepackage{graphicx}
+\usepackage{subfig}  % 子图表和子标题
+\usepackage{float}
+
+% 数学公式支持
+\usepackage{amsmath}
+
+% 文档格式支持
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{enumitem}  % 修改enumerate格式
+
+
+
+%============================================================
+%                     正文
+%============================================================
+
+\begin{document}   % 开始编写文档，命令以\开头
+	"hello \LaTeX!"
+\end{document}
+

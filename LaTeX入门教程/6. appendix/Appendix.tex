@@ -1,0 +1,171 @@
+\documentclass[12pt]{elegantpaper} % 源文件的类型
+
+%------------------------------------------------------
+%             宏包区
+%------------------------------------------------------
+\usepackage{appendix}
+\usepackage{listings}
+% 代码段的格式设置
+% language 使用的语言
+% basicstyle 字号
+% numbers 行号的的位置，可取值none, left, right
+% keywordstyle 关键词的颜色大小
+% numberstyle 行号的颜色大小
+% stepnumber 行号从几开始
+% numbersep 设置行号与代码之间的间隔
+% commentstyle 注释的颜色大小
+% backgroundcolor 背景的颜色
+% frame 外框的格式, shadow / single / none
+% framexleftmargin 外框在左边的页边距
+% tabsize 将默认tab设置为x个空格
+% rulecolor 边框颜色
+% title 设置代码块的标题是文件的标题
+% escapeinside 用于中文注释乱码
+
+\lstset{language=[ANSI]c,
+	basicstyle=\small,
+	numbers=left,
+	keywordstyle=\color{blue},
+	numberstyle={\tiny\color{lightgray}},
+	stepnumber=1,
+	numbersep=5pt,
+	commentstyle=\small\color{red},
+	backgroundcolor=\color[rgb]{0.95,1.0,1.0},
+	frame=shadowbox,
+	framexleftmargin=5mm,
+	tabsize=4,
+	rulecolor=\color{black},
+	title=\lstname,
+	escapeinside=``}
+
+\usepackage{xcolor}
+
+%\usepackage[vlined,boxed,linesnumbered,commentsnumbered]{algorithm2e}
+\usepackage[ruled,vlined]{algorithm2e}
+
+% boxed: to have algorithms enclosed in a box.
+% ruled: to have algorithms with a line at the top and the bottom
+% commentsnumbered: makes comments be numbered if numbering is active.
+% lined: 代码中for-end等组合之间的连线
+% vlined：代码中for-end等组合之间的连线末尾有一短横线
+
+
+%% 文章信息区
+\title{\LaTeX:附录的插入与使用}
+\author{Yushu @ LinCol}
+\date{\today}
+
+%% 文档开始
+\begin{document}
+	
+\maketitle
+	
+\newpage
+	
+\section{Introduction}
+
+%\appendix
+%\appendixpage
+
+\newpage
+\begin{appendices}
+		
+\section{First appendix}
+
+Here are simulation programmes we used in our model as follow.\\
+
+\textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
+
+\lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
+
+\section{Second appendix}
+
+some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
+\lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
+\lstinputlisting[language=Python,firstline=1,lastline=15]{./code/PSO.py}
+
+\begin{lstlisting}[language=C]
+int main(int argc, char ** argv) { 
+printf("Hello world!\n"); // `显示结果`
+return 0; 
+}
+\end{lstlisting}
+
+\section{伪代码的插入}
+
+\begin{algorithm}
+	\SetKwData{Left}{left}\SetKwData{This}{this}\SetKwData{Up}{up}
+	\SetKwFunction{Union}{Union}\SetKwFunction{FindCompress}{FindCompress}
+	\KwIn{A bitmap $Im$ of size $w\times l$}
+	\KwOut{A partition of the bitmap}
+	\BlankLine
+	\emph{special treatment of the first line}\;
+	\For{$i\leftarrow 2$ \KwTo $l$}{
+		\emph{special treatment of the first element of line $i$}\;
+		\For{$j\leftarrow 2$ \KwTo $w$}{\label{forins}
+			\Left$\leftarrow$ \FindCompress{$Im[i,j-1]$}\;
+			\Up$\leftarrow$ \FindCompress{$Im[i-1,]$}\;
+			\This$\leftarrow$ \FindCompress{$Im[i,j]$}\;
+			\If(\tcp*[h]{O(\Left,\This)==1}){\Left compatible with \This}{\label{lt}
+				\lIf{\Left $<$ \This}{\Union{\Left,\This}}
+				\lElse{\Union{\This,\Left}}
+			} % \tcp*[h] 居左注释 \tcp*[f] 居右注释
+			\If(\tcp*[f]{O(\Up,\This)==1}){\Up compatible with \This}{\label{ut}
+				\lIf{\Up $<$ \This}{\Union{\Up,\This}}
+				\tcp{\This is put under \Up to keep tree as flat as possible}\label{cmt}
+				\lElse{\Union{\This,\Up}}
+			}
+		}
+		\lForEach{element $e$ of the line $i$}{\FindCompress{p}}
+	}
+	\caption{disjoint decomposition}\label{algo_disjdecomp}
+\end{algorithm}
+
+\begin{algorithm}
+	\KwData{$G=(X,U)$ such that $G^{tc}$ is an order.}
+	\KwResult{$G’=(X,V)$ with $V\subseteq U$ such that $G’^{tc}$ is an
+		interval order.}
+	\Begin{
+		$V \longleftarrow U$\;
+		$S \longleftarrow \emptyset$\;
+		\For{$x\in X$}{
+			$NbSuccInS(x) \longleftarrow 0$\;
+			$NbPredInMin(x) \longleftarrow 0$\;
+			$NbPredNotInMin(x) \longleftarrow |ImPred(x)|$\;
+		}
+		\For{$x \in X$}{
+			\If{$NbPredInMin(x) = 0$ {\bf and} $NbPredNotInMin(x) = 0$}{
+				$AppendToMin(x)$}
+		}
+		\nl\While{$S \neq \emptyset$}{\label{InRes1}
+			\nlset{REM} remove $x$ from the list of $T$ of maximal index\;\label{InResR}
+			\lnl{InRes2}\While{$|S \cap ImSucc(x)| \neq |S|$}{
+				\For{$ y \in S-ImSucc(x)$}{
+					\{ remove from $V$ all the arcs $zy$ : \}\;
+					\For{$z \in ImPred(y) \cap Min$}{
+						remove the arc $zy$ from $V$\;
+						$NbSuccInS(z) \longleftarrow NbSuccInS(z) - 1$\;
+						move $z$ in $T$ to the list preceding its present list\;
+						\{i.e. If $z \in T[k]$, move $z$ from $T[k]$ to
+						$T[k-1]$\}\;
+					}
+					$NbPredInMin(y) \longleftarrow 0$\;
+					$NbPredNotInMin(y) \longleftarrow 0$\;
+					$S \longleftarrow S - \{y\}$\;
+					$AppendToMin(y)$\;
+				}
+			}
+			$RemoveFromMin(x)$\;
+		}
+	}
+	\caption{IntervalRestriction\label{IR}}
+\end{algorithm}
+
+% \nl 编号
+% \nlset 自己设置编号格式
+% \lnl
+引用伪代码中的内容：\ref{InResR}, \ref{InRes2}
+\end{appendices}
+
+\end{document}
+

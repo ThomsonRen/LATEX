@@ -1,0 +1,37 @@
+% 参考文献的引用
+% 一 将文献附在文章之后
+% 二 .bib文件结构
+
+\documentclass{article}
+
+%% 文章信息区
+\title{\LaTeX: edit in tex files}
+%\author{任公子@SJTU}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+This  system can be used for many types of airplanes\cite{1}, and it also solves the interference during  the procedure of the boarding airplane,as described above we can get to the  optimization boarding time\cite{sze:liu}.We also know that all the service is automate.\cite[page 22]{2}
+
+% \begin{thebibliography}{width} 中的width用以限制参考文献序号的宽度
+
+% 99 意味着不超过两位数字。通常设定为与参考文献的数目一致。
+\begin{thebibliography}{99}
+\bibitem{1} D.~E. KNUTH   The \TeX{}book  the American
+Mathematical Society and Addison-Wesley
+Publishing Company , 1984-1986.
+\bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
+Addison-Wesley Publishing Company, 1986.
+\bibitem{sze:liu}
+Szegedy C, Liu W, Jia Y, Sermanet P, Reed S, Anguelov D, Erhan D, Vanhoucke V, Rab-inovich A.:
+Going deeper with convolutions. In:
+Proceedings of the 2015 IEEE Conference on Computer Vision and Pattern Recognition,
+Cvpr 2015. IEEE, Boston (2015).
+\end{thebibliography}
+
+\end{document}
