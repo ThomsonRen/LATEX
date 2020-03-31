@@ -2,7 +2,8 @@
 
 [toc]
 
-# 1. $\LaTeX$ 介绍
+# 1. \LaTeX 介绍
+
 
 是一种排版工具，尤其**擅长处理数学公式**和**固定格式的文档**。秉承**格式和内容分离**的概念。[^1]
 
@@ -10,11 +11,11 @@
 
 
 
-# 2. 关于$\LaTeX$ vs. Word
+# 2. 关于LaTeX vs. Word
 
-$\LaTeX$和Word都是工具，**适用于不同场景，不是彼此的替代品**，不必因为使用其中一个就弃用另一个。
+LaTeX和Word都是工具，**适用于不同场景，不是彼此的替代品**，不必因为使用其中一个就弃用另一个。
 
-## $\LaTeX$优点[^1]
+## LaTeX优点[^1]
 
 - 数学公式的**自动编号**和**交叉引用**
 
@@ -24,13 +25,13 @@ $\LaTeX$和Word都是工具，**适用于不同场景，不是彼此的替代品
 
 - 免费
 
-## $\LaTeX$缺点
+## LaTeX缺点
 
 - 入门相对比较难
 - 需要等时间渲染
 - 可编辑性差，没有像word一样的**审阅、修订**功能(可以适当通过pdf的一些功能弥补，但还是没有word方便)
 
-## $\LaTeX$适用场景
+## LaTeX适用场景
 
 - 论文写作
 - 数学科研类PPT制作
@@ -39,7 +40,7 @@ $\LaTeX$和Word都是工具，**适用于不同场景，不是彼此的替代品
 
 
 
-# 3. $\LaTeX$ 环境配置
+# 3. LaTeX环境配置
 
 ## 离线版（运行快，但对新手不友好）
 
@@ -57,7 +58,7 @@ overleaf： https://www.overleaf.com/
 
 
 
-# 4. $\LaTeX$ 语法
+# 4. LaTeX 语法
 
 见视频中 overleaf实际操作。新手友好，有经验的同学这里可快进。
 
@@ -77,14 +78,14 @@ overleaf： https://www.overleaf.com/
 
   
 
-# 5. 提高$\LaTeX$ 效率的2款工具
+# 5. 提高LaTeX 效率的2款工具
 
 - [mathpix]( https://mathpix.com/ )  【强推！！！】
 - [excel2Latex]( https://www.ctan.org/tex-archive/support/excel2latex )  【弱推！！！】
 
 
 
-# 6. $\LaTeX$ 模板获取和使用
+# 6.LaTeX 模板获取和使用
 
 - [latex工作室](https://www.latexstudio.net/articles/ )
 
