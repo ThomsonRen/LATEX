@@ -1,11 +1,9 @@
-# Latex
-
-[toc]
-
-# 1. \LaTeX 介绍
 
 
-是一种排版工具，尤其**擅长处理数学公式**和**固定格式的文档**。秉承**格式和内容分离**的概念。[^1]
+# 1. LaTeX 介绍
+
+
+是一种排版工具，尤其**擅长处理数学公式**和**固定格式的文档**。秉承**格式和内容分离**的概念。
 
 常常与Word并列，Word秉持格式和内容融为一体的概念。
 
@@ -15,7 +13,7 @@
 
 LaTeX和Word都是工具，**适用于不同场景，不是彼此的替代品**，不必因为使用其中一个就弃用另一个。
 
-## LaTeX优点[^1]
+## LaTeX优点
 
 - 数学公式的**自动编号**和**交叉引用**
 
@@ -93,9 +91,3 @@ overleaf： https://www.overleaf.com/
 - MCM2020模板（见overleaf视频操作）
 - elegant paper 模板
 
-
-
-# Reference
-
-[^1]: LaTeX学习笔记,Liukairui,https://blog.csdn.net/Liukairui/article/details/102866961
-[^2]: 
